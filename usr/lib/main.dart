@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'models/user.dart';
 import 'screens/home_screen.dart';
 import 'screens/matches_screen.dart';
 import 'screens/profile_screen.dart';
@@ -34,16 +35,16 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _screens = [
-    HomeScreen(),
-    MatchesScreen(),
+  static final List<Widget> _screens = [
+    const HomeScreen(),
+    const MatchesScreen(),
     ProfileScreen(user: UserProfile(
       id: 'current',
       name: 'You',
       age: 25,
       bio: 'Welcome to DateMate! Find your perfect match.',
       imageUrl: 'https://via.placeholder.com/300x400?text=You',
-      interests: ['Dating', 'Romance', 'Connections'],
+      interests: const ['Dating', 'Romance', 'Connections'],
     )),
   ];
 
